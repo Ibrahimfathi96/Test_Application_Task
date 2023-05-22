@@ -35,41 +35,39 @@ class _ChangeColorViewState
       builder: (context, viewModel, _) {
         return GestureDetector(
           onTap: viewModel.changeBackgroundColor,
-          child: SafeArea(
-            child: Scaffold(
-              backgroundColor: viewModel.backgroundColor,
-              body: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 16.0),
-                    child: LottieBuilder.network(
-                      "https://assets5.lottiefiles.com/packages/lf20_puciaact.json",
+          child: Scaffold(
+            backgroundColor: viewModel.backgroundColor,
+            body: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                  child: LottieBuilder.network(
+                    "https://assets5.lottiefiles.com/packages/lf20_puciaact.json",
+                  ),
+                ),
+                DefaultTextStyle(
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: viewModel.textColor,
+                  ),
+                  textAlign: TextAlign.center,
+                  child: Center(
+                    child: AnimatedTextKit(
+                      totalRepeatCount: 1,
+                      repeatForever: true,
+                      pause: const Duration(milliseconds: 1200),
+                      animatedTexts: [
+                        TyperAnimatedText(
+                          'Hello there',
+                        ),
+                      ],
                     ),
                   ),
-                  DefaultTextStyle(
-                    style: TextStyle(
-                      fontSize: 24,
-                      fontWeight: FontWeight.bold,
-                      color: viewModel.textColor,
-                    ),
-                    textAlign: TextAlign.center,
-                    child: Center(
-                      child: AnimatedTextKit(
-                        totalRepeatCount: 1,
-                        repeatForever: true,
-                        pause: const Duration(milliseconds: 1200),
-                        animatedTexts: [
-                          TyperAnimatedText(
-                            'Hello there',
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         );

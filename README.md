@@ -8,6 +8,9 @@ I know it could be not perfect but I tried my best and always trying my best to 
 Used Solid Lints and run those lines and got zero issues,
 
   dart analyze;
+  
   dart run dart_code_metrics:metrics analyze lib test;
+  
   dart run dart_code_metrics:metrics check-unused-files lib test;
+  
   dart run dart_code_metrics:metrics check-unused-l10n lib test;

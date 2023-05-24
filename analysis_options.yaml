@@ -1,12 +1,8 @@
 include: package:flutter_lints/flutter.yaml
 linter:
 
-#rules:
-
-#     include: package:solid_lints/analysis_options.yaml
-#              package:solid_lints/analysis_options_test.yaml
-
 rules:
+  - include: package:solid_lints/analysis_options.yaml
   # Style rules
   - camel_case_types
   - library_names

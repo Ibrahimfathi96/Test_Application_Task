@@ -7,5 +7,3 @@ rules:
      include: package:solid_lints/analysis_options.yaml
               package:solid_lints/analysis_options_test.yaml
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
